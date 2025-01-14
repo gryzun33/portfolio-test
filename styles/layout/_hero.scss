@@ -13,6 +13,13 @@
   // z-index: 1;
 }
 
+.burger {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
 .hero-content {
   @include wrapper;
   width: 100%;

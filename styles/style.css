@@ -343,6 +343,13 @@ a {
   background-repeat: no-repeat;
 }
 
+.burger {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
 .hero-content {
   max-width: 1140px;
   margin: 0 auto;

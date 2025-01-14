@@ -318,6 +318,7 @@ template {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", serif;
 }
 
 html {
@@ -332,8 +333,102 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-family: "Poppins", serif;
+.hero {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-image: url("../../assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid red;
+  padding-top: 206px;
+}
+.hero-content__title {
+  margin: 0;
+  font-size: 16px;
+  color: #000000;
+  position: relative;
+  font-family: "Montserrat", serif;
   font-weight: 700;
   font-style: normal;
+  z-index: 1;
+  padding-left: 10px;
+}
+.hero-content__title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ffa501;
+  z-index: -1;
+}
+.hero-content__descr {
+  margin-top: 9px;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  max-width: 532px;
+  line-height: 60px;
+}
+.hero-content__btns {
+  margin-top: 37px;
+  width: 300px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.portf-btn {
+  width: 135px;
+  height: 45px;
+  background-color: #ffa501;
+  color: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-style: normal;
+  transition: background-color 0.3s ease;
+}
+.portf-btn:hover {
+  background-color: #ffbf47;
+}
+
+.about-btn {
+  color: #000000;
+  font-size: 14px;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-style: normal;
+  position: relative;
+  margin-left: 44px;
+}
+.about-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #000000;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+.about-btn:hover::after {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

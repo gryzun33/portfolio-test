@@ -350,8 +350,44 @@ a {
   cursor: pointer;
 }
 
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: 570px;
+  left: 50px;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+.socials__text {
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16;
+}
+.socials__line {
+  width: 70px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+.social-icons a {
+  transition: transform 0.3s ease;
+}
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
 .hero-content {
-  max-width: 1140px;
+  max-width: 1180px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
   width: 100%;
   border: 1px solid red;

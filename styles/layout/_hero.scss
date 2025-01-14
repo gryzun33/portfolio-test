@@ -20,6 +20,40 @@
   cursor: pointer;
 }
 
+.socials {
+  @include flex(flex-start, center);
+  gap: 15px;
+  position: absolute;
+  top: 570px;
+  left: 50px;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+
+  &__text {
+    @include montserrat-bold;
+    font-size: 16;
+  }
+
+  &__line {
+    width: 70px;
+    height: 2px;
+    background-color: $color-text;
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+
+  a {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
 .hero-content {
   @include wrapper;
   width: 100%;

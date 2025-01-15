@@ -3,17 +3,18 @@
   top: 0;
   left: 0;
   width: 345px;
-  height: 800px;
+  height: 100vh;
+  max-height: 800px;
   background-color: $color-main;
-  // color: $color-text-menu;
   z-index: 3;
   padding-top: 140px;
   @include flex-column;
-  // display: none;
+  overflow-y: auto;
 
   @include tablets {
     width: 250px;
-    height: 640px;
+    height: 100vh;
+    max-height: 640px;
   }
 
   &__close-btn {

@@ -76,9 +76,9 @@
   }
 
   &__item-text {
-    color: $color-text-menu;
-    @include montserrat-bold;
-    font-size: 24px;
+    @include montserrat-bold(24px, $color-text-menu);
+    // color: $color-text-menu;
+    // font-size: 24px;
     text-transform: uppercase;
     margin-left: 20px;
     transition: color 0.3s ease;

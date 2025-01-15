@@ -55,10 +55,20 @@
   font-style: normal;
 }
 
-@mixin montserrat-bold {
+@mixin montserrat-bold($font-size: 16px, $color: #000000) {
   font-family: 'Montserrat', serif;
   font-weight: 700;
   font-style: normal;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin montserrat-medium($font-size: 16px, $color: #000000) {
+  font-family: 'Montserrat', serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: $font-size;
+  color: $color;
 }
 
 @mixin btn {
@@ -98,4 +108,12 @@
   &:hover::after {
     width: 100%;
   }
+}
+
+@mixin circle-item {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: $color-main;
+  z-index: -1;
 }

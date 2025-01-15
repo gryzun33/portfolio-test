@@ -1,0 +1,169 @@
+.experience {
+  &__wrapper {
+    @include wrapper;
+    @include flex-column;
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 60px;
+
+    @include tablets {
+      padding-left: 8px;
+      padding-right: 12px;
+    }
+  }
+
+  &__title {
+    @include montserrat-bold;
+    align-self: center;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+      @include circle-item;
+    }
+  }
+
+  &__descr {
+    @include montserrat-bold(36px);
+    line-height: 60px;
+    align-self: center;
+
+    @include tablets {
+      font-size: 24px;
+      margin-top: 20px;
+      line-height: 36px;
+    }
+  }
+
+  &__line {
+    align-self: center;
+    margin-top: 25px;
+
+    @include tablets {
+      margin-top: 15px;
+    }
+  }
+
+  &__content {
+    margin-top: 60px;
+    padding-left: 65px;
+    padding-right: 89px;
+    @include flex(space-between);
+    gap: 40px;
+
+    @include tablets {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      padding: 0;
+    }
+  }
+}
+
+.exp-box {
+  max-width: 425px;
+  width: 100%;
+  position: relative;
+
+  &__title-wrapper {
+    @include flex(flex-start, center);
+  }
+
+  &__circle {
+    @include circle-item;
+    width: 15px;
+    height: 15px;
+  }
+
+  &__title {
+    @include montserrat-bold(20px);
+    line-height: 30px;
+    margin-left: 35px;
+  }
+
+  &__list {
+    margin-left: 50px;
+    @include flex-column;
+    gap: 45px;
+    margin-top: 45px;
+
+    @include tablets {
+      gap: 10px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 3%;
+    width: 1px;
+    height: 97%;
+    background-color: black;
+    z-index: -1;
+  }
+}
+
+.exp-item {
+  &__title-wrapper {
+    @include flex(flex-start, center);
+  }
+
+  &__add-elem {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 1px;
+      background-color: black;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+  }
+
+  &__circle {
+    @include circle-item;
+  }
+
+  &__title {
+    margin-left: 20px;
+  }
+
+  &__main-title {
+    @include montserrat-bold(14px);
+    line-height: 21px;
+  }
+
+  &__descr {
+    @include montserrat-medium(12px);
+    line-height: 18px;
+
+    @include tablets {
+      height: 30px;
+    }
+  }
+
+  &__text {
+    @include montserrat-medium(12px);
+    line-height: 18px;
+    margin-top: 12px;
+
+    @include tablets {
+      margin-top: 10px;
+    }
+  }
+}

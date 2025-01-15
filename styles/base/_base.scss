@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  min-height: 100dvh;
+  // min-height: 100dvh;
   position: relative;
 }
 
@@ -52,4 +52,10 @@ ul {
 
 .no-scroll {
   overflow-y: hidden;
+}
+
+.add-line {
+  width: 60px;
+  height: 2px;
+  background-color: $color-main;
 }

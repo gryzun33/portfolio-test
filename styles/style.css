@@ -335,12 +335,18 @@ a {
 
 .hero {
   position: relative;
-  width: 100%;
+  width: 1920;
   height: 800px;
-  background-image: url("../../assets/images/background.jpg");
+  background-image: url("../../assets/images/background-copy.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center top -110px;
   background-repeat: no-repeat;
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    background-position: center top;
+    height: 640px;
+  }
 }
 
 .burger {
@@ -348,6 +354,11 @@ a {
   top: 20px;
   right: 30px;
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .burger {
+    right: 20px;
+  }
 }
 
 .socials {
@@ -360,6 +371,11 @@ a {
   left: 50px;
   transform: rotate(-90deg);
   transform-origin: top left;
+}
+@media screen and (max-width: 1350px) {
+  .socials {
+    display: none;
+  }
 }
 .socials__text {
   font-family: "Montserrat", serif;
@@ -390,8 +406,13 @@ a {
   padding-right: 20px;
   margin: 0 auto;
   width: 100%;
-  border: 1px solid red;
   padding-top: 206px;
+}
+@media screen and (max-width: 767px) {
+  .hero-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .hero-content__title {
   margin: 0;
@@ -425,12 +446,23 @@ a {
   max-width: 532px;
   line-height: 60px;
 }
+@media screen and (max-width: 767px) {
+  .hero-content__descr {
+    font-size: 26px;
+    line-height: 45px;
+  }
+}
 .hero-content__btns {
   margin-top: 37px;
   width: 300px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .hero-content__btns {
+    margin-top: 25px;
+  }
 }
 
 .portf-btn {

@@ -4,13 +4,18 @@
 
 .hero {
   position: relative;
-  width: 100%;
+  width: 1920;
   height: 800px;
-  background-image: url('../../assets/images/background.jpg');
+  background-image: url('../../assets/images/background-copy.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center top -110px;
   background-repeat: no-repeat;
   // z-index: 1;
+
+  @include tablets {
+    background-position: center top;
+    height: 640px;
+  }
 }
 
 .burger {
@@ -18,9 +23,17 @@
   top: 20px;
   right: 30px;
   cursor: pointer;
+
+  @include tablets {
+    right: 20px;
+  }
 }
 
 .socials {
+  @include desktop-1350 {
+    display: none;
+  }
+
   @include flex(flex-start, center);
   gap: 15px;
   position: absolute;
@@ -57,9 +70,14 @@
 .hero-content {
   @include wrapper;
   width: 100%;
-  border: 1px solid red;
+  // border: 1px solid red;
   padding-top: 206px;
   // max-width: 532px;
+
+  @include tablets {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   &__title {
     margin: 0;
@@ -90,12 +108,21 @@
     font-size: 48px;
     max-width: 532px;
     line-height: 60px;
+
+    @include tablets {
+      font-size: 26px;
+      line-height: 45px;
+    }
   }
 
   &__btns {
     margin-top: 37px;
     width: 300px;
     @include flex(flex-start, center);
+
+    @include tablets {
+      margin-top: 25px;
+    }
   }
 }
 

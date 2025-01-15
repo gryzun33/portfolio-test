@@ -1,23 +1,16 @@
-// h1 {
-//   @include poppins-bold;
-// }
-
 .hero {
   position: relative;
-  // width: 1920;
   height: 800px;
   background-image: url('../../assets/images/background-copy.jpg');
   background-size: cover;
   background-position: center top -110px;
   background-repeat: no-repeat;
-  // z-index: 1;
 
   @include desktop-1500 {
     background-position: center top;
   }
 
   @include tablets {
-    // background-position: center top;
     height: 640px;
   }
 }
@@ -63,9 +56,7 @@
 .hero-content {
   @include wrapper;
   width: 100%;
-  // border: 1px solid red;
   padding-top: 210px;
-  // max-width: 532px;
 
   @include tablets {
     padding-left: 10px;
@@ -110,9 +101,8 @@
 
   &__btns {
     margin-top: 37px;
-    width: 300px;
     @include flex(flex-start, center);
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
 
     @include tablets {
       margin-top: 30px;

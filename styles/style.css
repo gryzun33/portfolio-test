@@ -359,6 +359,13 @@ ul {
   display: none;
   z-index: 2;
 }
+.overlay_active {
+  display: block;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
 
 .hero {
   position: relative;
@@ -475,10 +482,10 @@ ul {
 }
 .hero-content__btns {
   margin-top: 37px;
-  width: 300px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 767px) {
   .hero-content__btns {
@@ -532,7 +539,7 @@ ul {
 .side-menu {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   width: 345px;
   height: 100vh;
   max-height: 800px;
@@ -544,6 +551,7 @@ ul {
   justify-content: normal;
   align-items: normal;
   overflow-y: auto;
+  transition: left 0.3s ease;
 }
 @media screen and (max-width: 767px) {
   .side-menu {
@@ -564,6 +572,9 @@ ul {
   align-self: center;
   margin-bottom: 50px;
   margin-top: auto;
+}
+.side-menu_open {
+  left: 0;
 }
 
 .menu {

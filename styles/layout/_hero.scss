@@ -4,7 +4,7 @@
 
 .hero {
   position: relative;
-  width: 1920;
+  // width: 1920;
   height: 800px;
   background-image: url('../../assets/images/background-copy.jpg');
   background-size: cover;
@@ -12,8 +12,12 @@
   background-repeat: no-repeat;
   // z-index: 1;
 
-  @include tablets {
+  @include desktop-1500 {
     background-position: center top;
+  }
+
+  @include tablets {
+    // background-position: center top;
     height: 640px;
   }
 }
@@ -23,6 +27,8 @@
   top: 20px;
   right: 30px;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 
   @include tablets {
     right: 20px;
@@ -54,24 +60,11 @@
   }
 }
 
-.social-icons {
-  display: flex;
-  gap: 15px;
-
-  a {
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-}
-
 .hero-content {
   @include wrapper;
   width: 100%;
   // border: 1px solid red;
-  padding-top: 206px;
+  padding-top: 210px;
   // max-width: 532px;
 
   @include tablets {
@@ -111,7 +104,7 @@
 
     @include tablets {
       font-size: 26px;
-      line-height: 45px;
+      line-height: 40px;
     }
   }
 
@@ -119,9 +112,10 @@
     margin-top: 37px;
     width: 300px;
     @include flex(flex-start, center);
+    // flex-wrap: wrap;
 
     @include tablets {
-      margin-top: 25px;
+      margin-top: 30px;
     }
   }
 }

@@ -16,3 +16,20 @@ body {
 a {
   text-decoration: none;
 }
+
+ul {
+  list-style-type: none;
+}
+
+.social-icons ul {
+  display: flex;
+  gap: 15px;
+
+  li {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

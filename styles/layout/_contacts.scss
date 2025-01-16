@@ -130,6 +130,17 @@
       margin-top: 20px;
     }
   }
+
+  &__response {
+    margin-top: 10px;
+    @include montserrat-medium(16px);
+    align-self: center;
+    visibility: hidden;
+
+    &_visible {
+      visibility: visible;
+    }
+  }
 }
 
 .agreement {

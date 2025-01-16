@@ -262,6 +262,90 @@
           </div>
         </div>
       </section>
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <div class="contacts__image">
+            <img src="./assets/images/photo.jpg" alt="my-photo" />
+          </div>
+          <div class="contacts__content">
+            <h2 class="contacts__title">Контакты</h2>
+            <p class="contacts__descr">Свяжитесь со мной</p>
+            <div class="contacts__line add-line"></div>
+            <p class="contacts__text">Любым удобным для вас способом:</p>
+            <nav class="contacts__nav social-icons">
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <img
+                      src="./assets/icons/Facebook.svg"
+                      alt="Facebook"
+                      width="30"
+                      height="30"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://t.me/" target="_blank">
+                    <img
+                      src="./assets/icons/Telegram.svg"
+                      alt="Telegram"
+                      width="30"
+                      height="30"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com" target="_blank">
+                    <img
+                      src="./assets/icons/Instagram.svg"
+                      alt="Instagram"
+                      width="30"
+                      height="30"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <p class="contacts__text">
+              Или оставьте ваши данные и я сама вам напишу:
+            </p>
+            <form class="contacts__form form">
+              <div class="form__first-group">
+                <fieldset class="form__name form-field">
+                  <legend>Ваше Имя</legend>
+                  <input type="text" id="name" name="name" required />
+                </fieldset>
+
+                <fieldset class="form__email form-field">
+                  <legend>Ваша Почта</legend>
+                  <input type="email" id="email" name="email" required />
+                </fieldset>
+              </div>
+
+              <fieldset class="form__message form-field">
+                <legend>Ваше Сообщение</legend>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="10"
+                  required
+                ></textarea>
+              </fieldset>
+              <div class="form__bottom-box">
+                <button class="form__submit" type="submit">
+                  Отправить сообщение
+                </button>
+                <div class="form__agreement agreement">
+                  <input class="agreement__checkbox" type="checkbox" />
+                  <p class="agreement__text">
+                    Я согласен(а) с политикой конфиденциальности
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="index.js"></script>
   </body>

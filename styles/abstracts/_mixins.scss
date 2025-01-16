@@ -10,6 +10,12 @@
   }
 }
 
+@mixin laptop-1100 {
+  @media screen and (max-width: 1100px) {
+    @content;
+  }
+}
+
 @mixin tablets {
   @media screen and (max-width: 767px) {
     @content;
@@ -78,6 +84,8 @@
   color: $color-text;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-size: 14px;
+  border: none;
+  outline: none;
   @include flex(center, center);
   @include montserrat-bold;
   transition: background-color 0.3s ease;

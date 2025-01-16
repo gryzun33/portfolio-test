@@ -89,6 +89,7 @@
   @include flex(center, center);
   @include montserrat-bold;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: $color-btn-hover;

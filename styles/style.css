@@ -375,7 +375,7 @@ ul {
 .hero {
   position: relative;
   height: 800px;
-  background-image: url("/assets/images/background-copy.jpg");
+  background-image: url("../assets/images/background-copy.jpg");
   background-size: cover;
   background-position: center top -110px;
   background-repeat: no-repeat;

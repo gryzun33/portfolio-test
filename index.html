@@ -309,37 +309,64 @@
             <p class="contacts__text">
               Или оставьте ваши данные и я сама вам напишу:
             </p>
-            <form class="contacts__form form">
+            <form class="contacts__form form" novalidate>
               <div class="form__first-group">
                 <fieldset class="form__name form-field">
                   <legend>Ваше Имя</legend>
-                  <input type="text" id="name" name="name" required />
+                  <input
+                    class="form__elem"
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="off"
+                    required
+                    pattern="^[a-zA-Zа-яА-Я]{3,}$"
+                  />
+                  <p class="form__error" id="error-name"></p>
                 </fieldset>
 
                 <fieldset class="form__email form-field">
                   <legend>Ваша Почта</legend>
-                  <input type="email" id="email" name="email" required />
+                  <input
+                    class="form__elem"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="off"
+                    pattern="^[A-Za-z0-9_\-]+@([A-Za-z0-9_\-])+\.([A-Za-z]{2,4})$"
+                  />
+                  <p class="form__error" id="error-email"></p>
                 </fieldset>
               </div>
 
               <fieldset class="form__message form-field">
                 <legend>Ваше Сообщение</legend>
                 <textarea
+                  class="form__elem"
                   id="message"
                   name="message"
                   rows="10"
                   required
+                  minlength="10"
                 ></textarea>
+                <p class="form__error" id="error-message"></p>
               </fieldset>
               <div class="form__bottom-box">
                 <button class="form__submit" type="submit">
                   Отправить сообщение
                 </button>
                 <div class="form__agreement agreement">
-                  <input class="agreement__checkbox" type="checkbox" required />
                   <p class="agreement__text">
                     Я согласен(а) с политикой конфиденциальности
                   </p>
+                  <input
+                    class="agreement__checkbox form__elem"
+                    type="checkbox"
+                    id="agree-checkbox"
+                    required
+                  />
+                  <p class="form__error" id="error-agreement"></p>
                 </div>
               </div>
               <p class="form__response"></p>

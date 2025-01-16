@@ -141,18 +141,41 @@
       visibility: visible;
     }
   }
+
+  &__error {
+    position: absolute;
+    top: 100%;
+    @include montserrat-medium(12px, red);
+    display: none;
+
+    &_visible {
+      display: block;
+    }
+  }
+}
+
+#error-agreement {
+  @include tablets {
+    top: 300%;
+  }
 }
 
 .agreement {
   margin-left: 20px;
   display: flex;
   order: 1;
+  position: relative;
 
   &__text {
     margin-left: 10px;
     @include montserrat-medium(12px);
     line-height: 18px;
     max-width: 170px;
+    order: 2;
+  }
+
+  input {
+    order: 1;
   }
 }
 

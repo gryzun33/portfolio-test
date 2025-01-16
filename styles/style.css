@@ -1035,11 +1035,31 @@ ul {
 .form__response_visible {
   visibility: visible;
 }
+.form__error {
+  position: absolute;
+  top: 100%;
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  color: red;
+  display: none;
+}
+.form__error_visible {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  #error-agreement {
+    top: 300%;
+  }
+}
 
 .agreement {
   margin-left: 20px;
   display: flex;
   order: 1;
+  position: relative;
 }
 .agreement__text {
   margin-left: 10px;
@@ -1050,6 +1070,10 @@ ul {
   color: #000000;
   line-height: 18px;
   max-width: 170px;
+  order: 2;
+}
+.agreement input {
+  order: 1;
 }
 
 .form-field {

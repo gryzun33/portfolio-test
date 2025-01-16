@@ -33,6 +33,8 @@ menuItems.forEach((item) => {
 // form
 const form = document.querySelector('.contacts__form');
 const respMessage = document.querySelector('.form__response');
+const formFields = document.querySelectorAll('.form__elem');
+const formFieldsArr = Array.from(formFields);
 
 function showResponse(response) {
   if (response) {
@@ -72,6 +74,15 @@ async function sendFormData(formData) {
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
+
+  const errElement = formFieldsArr.find(
+    (el) => !el.validity.valid || el.value.trim() === ''
+  );
+  if (errElement) {
+    showError(errElement);
+    return;
+  }
+
   const formData = new FormData(form);
 
   const data = {
@@ -84,3 +95,38 @@ form.addEventListener('submit', async (event) => {
 
   form.reset();
 });
+
+// validation
+const inpName = document.getElementById('name');
+const inpEmail = document.getElementById('email');
+const inpMessage = document.getElementById('message');
+const inpAgreemnt = document.getElementById('agree-checkbox');
+
+formFields.forEach((inp) => {
+  inp.addEventListener('input', () => {
+    if (inp.validity.valid) {
+      const tooltip = inp.nextElementSibling;
+      tooltip.classList.remove('form__error_visible');
+    } else {
+      showError(inp);
+    }
+  });
+});
+
+function showError(elem) {
+  const tooltip = elem.nextElementSibling;
+  tooltip.classList.add('form__error_visible');
+
+  if (elem === inpAgreemnt) {
+    tooltip.textContent =
+      'Вы должны согласиться с политикой конфиденциальности.';
+  } else if (elem.validity.valueMissing || elem.value.trim() === '') {
+    tooltip.textContent = 'Пожалуйста заполните поле';
+  } else if (elem === inpName && elem.validity.patternMismatch) {
+    tooltip.textContent = 'Имя должно содержать минимум три буквы';
+  } else if (elem === inpEmail && elem.validity.patternMismatch) {
+    tooltip.textContent = 'Введите корректный email';
+  } else if (elem === inpMessage && elem.validity.tooShort) {
+    tooltip.textContent = 'Сообщение должно содержать минимум 10 символов.';
+  }
+}
